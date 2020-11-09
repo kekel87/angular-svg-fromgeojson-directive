@@ -1,0 +1,8 @@
+<hello name="{{ name }}"></hello>
+
+<ul>
+  <li *ngFor="let geojson of geojsons$ | async">
+    <svg [fromGeoJson]="geojson"></svg>
+    <span>{{ geojson.properties['name'] }}</span>
+  </li>
+</ul>
